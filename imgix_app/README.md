@@ -1,6 +1,7 @@
 # React App build for Nanlabs challenge
 
-Clone the REpo.
+# Clone the REpo.
+
 ```npm install```
 
 ```npm start```

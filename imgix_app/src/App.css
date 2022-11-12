@@ -1,0 +1,225 @@
+.App {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #4c4c6b;
+}
+.sideBar {
+  background-color: #718cfe;
+  width: 100%;
+  max-height: 70vh;
+  flex: 1 0 20%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  color: white;
+}
+.sideBarContainer {
+  background-color: #718cfe;
+  width: 100%;
+  flex: 1 0 18%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  margin: 20px;
+  color: white;
+  transition: all ease-in-out 500ms;
+  transform: translateX(0px);
+}
+.sideOpen {
+  flex: 1 0 0%;
+}
+.adjustments .carousel {
+  height: 50%;
+  width: 90%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+ 
+}
+.slide {
+  padding: 0 37px;
+  margin: 0 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border-right: 0.4px solid;
+}
+.slide_selected {
+  background-color: rgba(241, 229, 199, 0.267);
+}
+.slide:hover {
+  background-color: rgba(241, 229, 199, 0.267);
+  cursor: pointer;
+}
+
+.renderImg {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+.imgName:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.topURL {
+  background: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.topURL span {
+  margin-left: 40px;
+  cursor: copy;
+}
+.mainComponent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 15px;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+.optionsComponent {
+  width: 100%;
+  background-color: #c7e6ff;
+  margin-top: 20px;
+  height: 25vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.rotation, .adjustments {
+  background-color: white;
+  width: 45%;
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.adjustments {
+  justify-content: space-around;
+}
+.rotationTitle {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  font-size: 32px;
+  height: 100%;
+  margin: auto;
+  z-index: 3;
+  background-color: white;
+  display: none;
+}
+.rotation:hover, .adjustments:hover {
+  box-shadow: 0 0 30px 0 #dbedda78;
+}
+.css-53tbrc-MuiSlider-root {
+  width: 50% !important;
+  margin-bottom: -35px;
+}
+.secondLayer {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.orientation, .flip, .rot {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+div[data-opt_type='flip'] {
+  margin-left: 20px;
+  cursor: pointer;
+}
+div[data-opt_type='flip']:hover {
+  text-decoration: underline;
+}
+.flip_selected {
+  color: darkgoldenrod;
+}
+.optTitle {
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+  justify-content: center;
+  border-right: 1px solid #60e547;
+}
+
+.renderComponent {
+  height: fit-content;
+  max-height: 70vh;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #dbe1eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

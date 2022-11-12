@@ -17,17 +17,19 @@
 .sideBarContainer {
   background-color: #718cfe;
   width: 100%;
-  flex: 1 0 18%;
+  flex: 1 0 20%;
   overflow-y: scroll;
   scroll-behavior: smooth;
   border-radius: 10px;
   margin: 20px;
   color: white;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 300ms;
   transform: translateX(0px);
+  opacity: 1;
 }
-.sideOpen {
+.close {
   flex: 1 0 0%;
+  opacity: 0;
 }
 .adjustments .carousel {
   height: 50%;

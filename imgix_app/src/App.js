@@ -65,26 +65,31 @@ function App() {
   const [displayURL, setDisplayURL] = useState('')
   const [isOpen, setOpen] = useState(true)
   const sideRef = useRef()
-  const handleSide = () => {
+  const closeRef = useRef()
+  const handleSide = (e) => {
     if (isOpen) {
-      sideRef.current.classList.add('sideOpen')
-      setTimeout(() => sideRef.current.style.display = 'none', 300)
+      sideRef.current.classList.add('close')
+      setTimeout(() => {
+        closeRef.current.style.opacity = '1'
+      },500) 
     } else {
-      sideRef.current.style.display = 'initial'
-      setTimeout(() => sideRef.current.classList.remove('sideOpen'), 300)
+      sideRef.current.classList.remove('close')
+      closeRef.current.style.opacity = '0'
     }
+    console.log(isOpen)
     setOpen(!isOpen)
   }
   return (
     <div className="App">
       <div ref={sideRef} className="sideBarContainer">
-        <div style={{padding: '20px', background: 'white', color: 'black'}}> <span style={{marginLeft: '-38px', marginRight: '28px', cursor: 'pointer'}}></span>SELECT IMAGE</div>
+        <div style={{padding: '20px', background: 'white', color: 'black'}}><span onClick={handleSide} style={{marginLeft: '-38px', marginRight: '28px', cursor: 'pointer', color: 'red'}}>◀</span>SELECT IMAGE</div>
       <div className='sideBar'>
         <SideBar setURL={setBaseURL}/>
       </div>
       <FileUploadSingle setBaseURL={setBaseURL}/>
       </div>
       <div className='mainComponent'>
+        <span ref={closeRef} style={{ position: 'fixed', top: '40px', left: '40px', cursor: 'pointer', opacity: '0', color: 'red'}} onClick={handleSide}>▶</span>
         <div className='topURL'><p>{decodeURIComponent(displayURL)}</p><span onClick={() => navigator.clipboard.writeText(displayURL)}>➕</span></div>
         <RenderImage options={options} baseURL={baseURL} displayURL={setDisplayURL} />
         <div className='optionsComponent'>
@@ -340,7 +345,7 @@ function FileUploadSingle({setBaseURL}) {
 
       <div>{file && `${file.name} - ${file.type}`}</div>
 
-      <button style={{cursor:'pointer',padding: '15px', margin: '30px', borderRadius: '20px', border: 'none'}} onClick={handleUploadClick}>Upload</button>
+      <button style={{cursor:'pointer',padding: '15px', margin: '15px', borderRadius: '20px', border: 'none'}} onClick={handleUploadClick}>Upload</button>
       <br></br>
       <div>React App by Diego Alvarez 🚀</div>
     </div>

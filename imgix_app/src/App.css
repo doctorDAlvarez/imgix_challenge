@@ -14,6 +14,12 @@
   scroll-behavior: smooth;
   color: white;
 }
+input[type="file" i] {
+  border-radius: 10px;
+  width: fit-content;
+  border: transparent !important;
+  outline: transparent !important;
+}
 .sideBarContainer {
   background-color: #718cfe;
   width: 100%;
@@ -21,7 +27,7 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
   color: white;
   transition: all ease-in-out 300ms;
   transform: translateX(0px);
@@ -34,11 +40,14 @@
 .adjustments .carousel {
   height: 50%;
   width: 90%;
-  overflow: scroll;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
  
+}
+.sideBarContainer::-webkit-scrollbar {
+  display: none;
 }
 .slide {
   padding: 0 37px;
@@ -113,9 +122,7 @@
   position: relative;
   border-radius: 20px;
 }
-.carousel::-webkit-scrollbar {
-  display: none;
-}
+
 .adjustments {
   justify-content: space-around;
 }
@@ -161,8 +168,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+ .flipContainer {
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
   scroll-behavior: smooth;
 }
 div[data-opt_type='flip'] {
@@ -186,7 +195,7 @@ div[data-opt_type='flip']:hover {
 
 .renderComponent {
   height: fit-content;
-  max-height: 70vh;
+  max-height: 60vh;
   width: 100%;
   border-radius: 20px;
 }
@@ -211,6 +220,41 @@ div[data-opt_type='flip']:hover {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+@media screen and (max-width: 900px) {
+  .sideBarContainer {
+    position: fixed;
+    width: auto;
+    z-index: 10;
+  }
+  .sideBarContainer.close {
+    z-index: -100;
+  }
+  .mainComponent {
+    margin-top: 50px;
+  }
+  .mainComponent span {
+    top:12px !important;
+    margin-left: 0 !important;
+  }
+  .adjustments, .rotation {
+    width: 100%;
+    height: 100%;
+  }
+  .optionsComponent {
+    flex-direction: column;
+    gap: 20px;
+    height: 50vh;
+  }
+  .renderComponent {
+    flex: 1;
+  }
+  .topURL p {
+    overflow-wrap: anywhere;
+  }
+  .imgName {
+    padding: 20px 0 !important;
+  }
 }
 
 .App-link {

@@ -89,7 +89,7 @@ function App() {
       <FileUploadSingle setBaseURL={setBaseURL}/>
       </div>
       <div className='mainComponent'>
-        <span ref={closeRef} style={{ position: 'fixed', top: '40px', left: '40px', cursor: 'pointer', opacity: '0', color: 'red'}} onClick={handleSide}>▶</span>
+        <span ref={closeRef} style={{ position: 'fixed', top: '40px', left: '40px', zIndex: 10, cursor: 'pointer', opacity: '0', color: 'red'}} onClick={handleSide}>▶</span>
         <div className='topURL'><p>{decodeURIComponent(displayURL)}</p><span onClick={() => navigator.clipboard.writeText(displayURL)}>➕</span></div>
         <RenderImage options={options} baseURL={baseURL} displayURL={setDisplayURL} />
         <div className='optionsComponent'>
@@ -335,7 +335,7 @@ function FileUploadSingle({setBaseURL}) {
   return (
     <div style={{marginTop: '20px'}}>
       <div style={{ paddingTop: '20px', 
-                    marginBottom: '20px',
+                    marginBottom: '7px',
                     textAlign: 'start',
                     paddingLeft: '10px',
                     borderTop: '1px solid',
@@ -347,7 +347,7 @@ function FileUploadSingle({setBaseURL}) {
 
       <button style={{cursor:'pointer',padding: '15px', margin: '15px', borderRadius: '20px', border: 'none'}} onClick={handleUploadClick}>Upload</button>
       <br></br>
-      <div>React App by Diego Alvarez 🚀</div>
+      <div style={{ marginBottom: '10px'}}>React App by Diego Alvarez 🚀</div>
     </div>
   );
 }

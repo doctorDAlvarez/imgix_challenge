@@ -227,6 +227,9 @@ div[data-opt_type='flip']:hover {
     width: auto;
     z-index: 10;
   }
+  .App {
+    height: fit-content;
+  }
   .sideBarContainer.close {
     z-index: -100;
   }

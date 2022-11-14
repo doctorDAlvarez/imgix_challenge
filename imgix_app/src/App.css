@@ -85,6 +85,7 @@ input[type="file" i] {
   border-radius: 20px;
   padding: 10px 14px;
   display: flex;
+  width: 85%;
   justify-content: space-between;
  
 }

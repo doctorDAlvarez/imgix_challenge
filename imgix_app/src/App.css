@@ -49,6 +49,9 @@ input[type="file" i] {
 .sideBarContainer::-webkit-scrollbar {
   display: none;
 }
+#upCTA:hover {
+  padding: 15px 30px !important;
+}
 .slide {
   padding: 0 37px;
   margin: 0 5px;
@@ -221,6 +224,14 @@ div[data-opt_type='flip']:hover {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.renderImg:hover {
+  box-shadow: 0 0 10px 0 white;
+}
+@media screen and (min-width: 900px) {
+  #signature {
+    margin-top: 40px;
+  }
 }
 @media screen and (max-width: 900px) {
   .sideBarContainer {

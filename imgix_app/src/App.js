@@ -345,9 +345,9 @@ function FileUploadSingle({setBaseURL}) {
 
       <div>{file && `${file.name} - ${file.type}`}</div>
 
-      <button style={{cursor:'pointer',padding: '15px', margin: '15px', borderRadius: '20px', border: 'none'}} onClick={handleUploadClick}>Upload</button>
+      <button id="upCTA" style={{cursor:'pointer',padding: '15px', margin: '15px', borderRadius: '20px', border: 'none', transition: 'all ease 300ms'}} onClick={handleUploadClick}>Upload</button>
       <br></br>
-      <div style={{ marginBottom: '10px'}}>React App by Diego Alvarez 🚀</div>
+      <div id="signature" style={{ marginBottom: '10px'}}>React App by Diego Alvarez 🚀</div>
     </div>
   );
 }

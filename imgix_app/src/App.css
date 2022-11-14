@@ -3,7 +3,7 @@
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: #4c4c6b;
+  background-color: #646b89;
 }
 .sideBar {
   background-color: #718cfe;
@@ -104,7 +104,7 @@ input[type="file" i] {
 }
 .optionsComponent {
   width: 100%;
-  background-color: #c7e6ff;
+  background-color: #ededede6;
   margin-top: 20px;
   height: 25vh;
   border-radius: 20px;
@@ -145,7 +145,7 @@ input[type="file" i] {
   display: none;
 }
 .rotation:hover, .adjustments:hover {
-  box-shadow: 0 0 30px 0 #dbedda78;
+  box-shadow: 0 0 30px 0 #718cfe;
 }
 .css-53tbrc-MuiSlider-root {
   width: 50% !important;
